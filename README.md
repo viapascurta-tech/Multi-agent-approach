@@ -34,9 +34,9 @@ Inputs|Vignette input|Vignette input: 'special comments'|Sepsis task result; Ant
 
 A clinical vignette represents here a structured way to present the sepsis case and contains several fields (e.g., diagnosis, demographics, vital signs, laboratory findings, medical history, and special comments)
 
-The *Crewai_sepsis.ipynb* file provides the code for building the sepsis management crew, which is based on the [crewai platform](https://www.crewai.com/).
+The *Crewai_sepsis.ipynb* file provides the code for building the sepsis management crew, which is based on the [crewai framework](https://www.crewai.com/).
 
-Persistent databases used for RAG are based on the [Chromadb platform](https://www.trychroma.com/). The [llamaIndex platform](https://docs.llamaindex.ai/en/stable/) is used for orchestration/indexing. 
+Persistent databases used for RAG are based on the [Chromadb platform](https://www.trychroma.com/). The [llamaIndex framework](https://docs.llamaindex.ai/en/stable/) is used for orchestration/indexing. 
 The code for this part of the work is available [here](https://github.com/viapascurta-tech/Creating_ChromaDBs_sepsis_related/blob/main/Creating_Chroma_DBs_sepsis.ipynb).
 
 The inference engine is [Writer Palmyra-med 70B LLM](https://writer.com/blog/palmyra-med-fin-models/) on [NVIDIA platform](https://build.nvidia.com/explore/discover). 

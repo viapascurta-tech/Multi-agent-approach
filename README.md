@@ -14,14 +14,14 @@ an LLM-based sepsis management crew to be used at the early stage of sepsis (i.e
 
 **Agents**
 
-Aspects|Sepsis management agent|Antibiotic recommendation agent|Gudelines compliance agent
+Aspects|Sepsis management agent|Antibiotic recommendation agent | Guidelines compliance agent
 ----- |-----|-----|-----
 Role|Sepsis Management Advisor|Antibiotic Specialist|Guidelines Compliance Officer
 Goal|Provide literature-based recommendations for sepsis management tailored to a patient case|Provide antibiotic recommendations based on the 'special comments' field of the patient vignette|Check if the recommendations comply with current sepsis management guidelines and provide additional guideline-based case management recommendations
 Backstory|You are a medical expert specializing in sepsis management, equipped with the latest literature and research findings|You are an expert in antibiotic therapy, capable of tailoring recommendations to specific patient needs|You are tasked with ensuring that sepsis management adheres to the latest guidelines
 Tools|RAG|RAG|RAG
 
-RAG stands for retrieval augmented generation
+RAG stands for retrieval-augmented generation
 
 **Tasks**
 
@@ -32,7 +32,7 @@ Expected output|Recommendations for sepsis management|Antibiotic recommendations
 Agent|Sepsis management agent|Antibiotic recommendation agent|Guideline compliance agent
 Inputs|Vignette input|Vignette input: 'special comments'|Sepsis task result; Antibiotic task result; Vignette input
 
-A clinical vignette represents here a structured way to present the sepsis case and contains several fields (e.g., diagnosis, demographics, vital signs, laboratory findings, medical history, and special comments)
+A clinical vignette represents a structured way to present the sepsis case and contains several fields (e.g., diagnosis, demographics, vital signs, laboratory findings, medical history, and special comments)
 
 The *Crewai_sepsis.ipynb* file provides the code for building the sepsis management crew, which is based on the [crewai framework](https://www.crewai.com/).
 
@@ -40,5 +40,9 @@ Persistent databases used for RAG are based on the [Chromadb platform](https://w
 The code for this part of the work is available [here](https://github.com/viapascurta-tech/Creating_ChromaDBs_sepsis_related/blob/main/Creating_Chroma_DBs_sepsis.ipynb).
 
 The inference engine is [Writer Palmyra-med 70B LLM](https://writer.com/blog/palmyra-med-fin-models/) on [NVIDIA platform](https://build.nvidia.com/explore/discover). 
-The LLM can be replaced with other LLM (e.g., GPT-3.5-turbo, GPT-4o, etc.), making respective changes in the code (i.e., API key, model name). 
+The LLM can be replaced with another LLM (e.g., GPT-3.5-turbo, GPT-4o, etc.), making respective changes in the code (i.e., API key, model name). 
 
+### Acknowledgments
+This code is part of the following projects:
+- Project PN-IV-PCB-RO-MD-2024-036 "DACISLAB: Virtual laboratory on open data and open science in the new generation of computing continuum systems";
+- Postdoctoral project no. 25.00208.5007.07/PD "Intelligent Software Methods and Algorithms for Intensive Care: A Complexity Science Approach," funded by the National Agency for Research and Development (NARD) of Moldova.
